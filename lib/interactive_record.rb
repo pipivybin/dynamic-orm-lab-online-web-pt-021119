@@ -67,7 +67,7 @@ end
 def self.find_by(sth)
 binding.pry
   sth.each do |key, value|
-    
+
   DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{key.to_s} = #{value}")
 
   end
