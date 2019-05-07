@@ -66,11 +66,11 @@ end
 
 def self.find_by(sth)
 
-  sth.each do |key, value|
-binding.pry
-  DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{key.to_s} = #{value}")
-
-  end
+#   sth.each do |key, value|
+# binding.pry
+#   DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{key.to_s} = #{value}")
+# 
+#   end
 end
 
 end
