@@ -65,8 +65,8 @@ def self.find_by_name(name)
 end
 
 def self.find_by(sth)
-sql = "SELECT * FROM #{self.table_name} WHERE #{key.to_s} = #{value}"
-
+sql = "SELECT * FROM #{self.table_name} WHERE #{sth.keys[0]} = ?"
+DB[:conn].execute(sql, sth.value[0]
 
 #   sth.each do |key, value|
 # binding.pry
